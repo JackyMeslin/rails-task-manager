@@ -1,1 +1,11 @@
-index.html.erb
+<h2>My tasks</h2>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %> </li>
+    <li><%= task.details %></li>
+    <li><%= task.completed %></li>
+
+  <% end %>
+</ul>
+
